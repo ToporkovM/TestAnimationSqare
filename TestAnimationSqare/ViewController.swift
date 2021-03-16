@@ -11,10 +11,8 @@ import UIKit
 class ViewController: UIViewController {
     
     private enum Constants {
-        static let squareViewWithBeforeAnimation: CGFloat = 60.0
-        static let squareViewHeightBeforeAnimation: CGFloat = 60.0
-        static let squareViewWithAfterAnimation: CGFloat = 120.0
-        static let squareViewHeightAfterAnimation: CGFloat = 120.0
+        static let squareViewFrameBeforeAnimation: CGFloat = 60.0
+        static let squareViewFrameAfterAnimation: CGFloat = 120.0
     }
     
     private enum AnimationState {
@@ -43,9 +41,9 @@ class ViewController: UIViewController {
     private func returnSizeDependingOnCondition(condition: AnimationState) -> CGRect {
         switch condition {
         case .before:
-            return CGRect(x: 0, y: 0,  width: Constants.squareViewWithBeforeAnimation, height: Constants.squareViewHeightBeforeAnimation)
+            return CGRect(x: 0, y: 0,  width: Constants.squareViewFrameBeforeAnimation, height: Constants.squareViewFrameBeforeAnimation)
         case .after:
-            return CGRect(x: 0, y: 0, width: Constants.squareViewWithAfterAnimation, height: Constants.squareViewHeightAfterAnimation)
+            return CGRect(x: 0, y: 0, width: Constants.squareViewFrameAfterAnimation, height: Constants.squareViewFrameAfterAnimation)
         }
     }
     
